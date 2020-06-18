@@ -115,10 +115,11 @@ class RectSwiperPaginationBuilder extends SwiperPlugin {
     for (int i = 0; i < itemCount; ++i) {
       bool active = i == activeIndex;
       Size size = active ? this.activeSize : this.size;
+      Color actColor = active ? activeColor : color;
       list.add(Container(
         width: size.width,
         height: size.height,
-        color: active ? activeColor : color,
+        color: actColor,
         key: Key("pagination_$i"),
         margin: EdgeInsets.all(space),
       ));
